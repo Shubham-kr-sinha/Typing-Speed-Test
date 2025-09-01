@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    background: orange;
+}
+
+.result-details {
+  margin-top: 20px;  
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+
+.result-details li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.wrapper{
+    width: 770px;
+    padding: 35px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+
+.wrapper .content-box{
+    padding: 10px 20px 0;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+}
+
+.wrapper .input-field{
+    padding: 13px 20px 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -99;
+}
+
+
+.typing-text span.active {
+  border-left: 2px solid #333;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { border-color: #333; }
+  51%, 100% { border-color: transparent; }
+}
+
+.content-box .content{
+    margin-top: 17px;
+    display: flex;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:  space-between;
+    border-top: 1px solid #bfbfbf;
+}
+
+.content-box .result-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 140px);
+}
+
+.result-details li{
+    display: flex;
+    height: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+button {
+  display: block;
+  margin: 30px auto 0 auto; /* centers the button horizontally */
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+.content button:active{
+    transform: scale(0.97);
+}
+
+.typing-text p span{
+    position: relative;
+}
+
+.typing-text p span.active{
+    color: orange;
+}
+
+.typing-text p span.correct{
+    color: green;
+}
+
+.typing-text p span.incorrect{
+    color: red;
+    outline: 1px solid #fff;
+    background: #ffc0cb;
+    border-radius: 4px;
+}
+
+::selection{
+    color:#fff;
+    background: orange;
+}
